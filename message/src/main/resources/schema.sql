@@ -1,0 +1,7 @@
+CREATE TABLE message (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  group_id INT NOT NULL,
+  user_id INT NOT NULL,
+  message VARCHAR(250) NOT NULL
+);
+
