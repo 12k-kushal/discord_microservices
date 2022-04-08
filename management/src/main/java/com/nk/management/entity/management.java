@@ -1,4 +1,5 @@
-package com.nk.message.entity;
+package com.nk.management.entity;
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,16 +7,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-@Table(name="message")
-public class Message {
+
+@Entity(name="management")
+@Table(name="management")
+public class management {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private long groupId;
     private long userId;
-    private String message;
 
 	public long getGroupId() {
 		return groupId;
@@ -31,13 +32,4 @@ public class Message {
 		this.userId = userId;
 	}
 	
-	public String getMessage() {
-		return message;
-	}
-	public void setMessage(String message) {
-		this.message = message;
-	}
-
-
 }
-
