@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Discord group</h1>
+<form id="messageForm">
+    Message: <input type="text" name="message">
+    <input type="button" value="Submit">
+</form>
+<button id="myButton">send message</button>
+</body>
+<script type="module" src="stompit"></script>
+
+<script src="scripts/message-queue-handler.js"></script>
+<!--<script>-->
+<!--    function sendMessage() {-->
+<!--        console.log('button was clicked');-->
+
+<!--        stompit.connect(connectOptions, function (error, client) {-->
+
+<!--            if (error) {-->
+<!--                console.log('connect error ' + error.message);-->
+<!--                return;-->
+<!--            }-->
+
+<!--            const sendHeaders = {-->
+<!--                'destination': '/queue/test',-->
+<!--                'content-type': 'text/plain'-->
+<!--            };-->
+
+<!--            const frame = client.send(sendHeaders);-->
+<!--            frame.write('hello');-->
+<!--            frame.end();-->
+
+<!--        });-->
+<!--    }-->
+
+<!--</script>-->
+
+</html>
