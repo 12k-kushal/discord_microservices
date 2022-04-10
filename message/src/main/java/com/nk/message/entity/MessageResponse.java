@@ -5,22 +5,22 @@ import java.util.List;
 //import com.nk.message.entity.Message;
 
 public class MessageResponse {
-	private List<Message> chat;
+	private List<MessageEntity> chat;
 
-	public MessageResponse(List<Message> chat){
+	public MessageResponse(List<MessageEntity> chat){
       this.chat = chat;
       }
   
-	public MessageResponse(Message chat){
-	  List<Message> chatlist = Collections.singletonList(chat);
+	public MessageResponse(MessageEntity chat){
+	  List<MessageEntity> chatlist = Collections.singletonList(chat);
       this.chat = chatlist;
       }
 
-	public List<Message> getChat() {
+	public List<MessageEntity> getChat() {
 		return chat;
 	}
 
-	public void setChat(List<Message> chat) {
+	public void setChat(List<MessageEntity> chat) {
 		this.chat = chat;
 	}
   

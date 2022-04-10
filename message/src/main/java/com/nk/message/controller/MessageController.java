@@ -2,7 +2,7 @@ package com.nk.message.controller;
 
 import com.nk.message.entity.MessageResponse;
 import com.nk.message.repository.MessageRepository;
-import com.nk.message.entity.Message;
+import com.nk.message.entity.MessageEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
@@ -38,7 +38,7 @@ public class MessageController {
     
     
 	@PostMapping("/post-message")
-	public MessageResponse postMessage(@RequestBody Message message) {
+	public MessageResponse postMessage(@RequestBody MessageEntity message) {
 		
     	String management_url = "http://localhost:9080/verify";
         ResponseEntity<Boolean> status  = restTemplate.exchange(management_url,
