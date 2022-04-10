@@ -54,7 +54,9 @@ public class ServiceConfiguration {
   }
   
   public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-      registry.addHandler(new sendMessage(), "/socket");
+      registry.addHandler(new sendMessage(), "/socket.io");
+      System.out.print(registry);
+      
   }
   
 }

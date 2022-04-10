@@ -1,7 +1,7 @@
 package com.nk.message.listener;
 
 
-import org.apache.activemq.command.ActiveMQTextMessage;
+import org.apache.activemq.command.ActiveMQBytesMessage;
 //
 //public class MessageConsumer {
 //
@@ -32,9 +32,11 @@ public class MessageConsumer implements MessageListener {
     @JmsListener(destination = "${active-mq.topic}")
     public void onMessage(Message message) {
         try{
-        	ActiveMQTextMessage  amqMessage  = (ActiveMQTextMessage)message;            
-//            System.out.println(amqMessage.getText());
-        	sendMessage.echo(amqMessage.getText());
+        	ActiveMQBytesMessage  amqMessage  = (ActiveMQBytesMessage)message;            
+            System.out.println(amqMessage.readUTF());
+            System.out.println("send message to ws");
+
+        	sendMessage.echo(amqMessage.readUTF());
 
         } catch(Exception e) {
 //          log.error("Received Exception : "+ e);
